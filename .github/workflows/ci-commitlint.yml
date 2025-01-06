@@ -5,10 +5,9 @@ concurrency:
 
 on:
   pull_request:
-    types: [ edited, synchronize, opened, reopened ]
+    types: [edited, synchronize, opened, reopened]
     branches:
       - main
-
 
 jobs:
   lint-commit-messages:
@@ -29,8 +28,7 @@ jobs:
         with:
           version: 9
 
-      - name:
-          Install dependencies
+      - name: Install dependencies
         # If we don't do this, commitlint throws
         # errors about not finding rules package
         # for commit message conventions
